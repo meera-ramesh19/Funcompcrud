@@ -50,23 +50,29 @@ const AddUserForm = (props) => {
     //   setUser(initialFormState);
     // }}
     >
-      <label>Name</label>
-      <input
-        type='text'
-        name='name'
-        value={user.name}
-        onChange={handleInputChange}
-      />
-      <label>Username</label>
-      <input
-        type='text'
-        name='comment'
-        value={user.comment}
-        onChange={handleInputChange}
-      />
-      <button type='submit' onClick={handleSubmit}>
-        Add new user
-      </button>
+      {/* <div> */}
+        <label>Name</label>
+        <input
+          type='text'
+          name='name'
+          value={user.name}
+          onChange={handleInputChange}
+        />
+      {/* </div>
+      <div> */}
+        <label>Username</label>
+        <input
+          type='text'
+          name='comment'
+          value={user.comment}
+          onChange={handleInputChange}
+        />
+      {/* </div>
+      <div> */}
+        <button type='submit' onClick={handleSubmit}>
+          Add new user
+        </button>
+      {/* </div> */}
     </form>
   );
   //     <form

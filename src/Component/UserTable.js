@@ -1,12 +1,13 @@
 import React from 'react';
 import './UserTable.css';
+import { FaPencilAlt, FaTimes } from 'react-icons/fa';
 
 const UserTable = (props) => {
   return (
     <table>
       <thead>
         <tr>
-          <th>ID</th>
+          {/* <th>ID</th> */}
           <th>Name</th>
           <th>Usercomment</th>
           <th>Actions</th>
@@ -19,13 +20,16 @@ const UserTable = (props) => {
           //  const { id, name, comment } = user;
             return (
               <tr key={user.id}>
-                <td>{user.id}</td>
+                {/* <td>{user.id}</td> */}
                 <td>{user.name}</td>
                 <td>{user.comment}</td>
                 <td>
-                  <button onClick={() => props.deleteUser(user.id)}> Delete</button>
+                <p><FaTimes onClick={() => props.deleteUser(user.id)}  className="delIcon" /></p>
+                 <p><FaPencilAlt onClick={() => props.editUser(user.id, user)}
+                  className="editIcon" /></p>
+                  {/* <button onClick={() => props.deleteUser(user.id)}> Delete</button>
                   <button onClick={() => props.editUser(user.id, user)}>
-                    Edit </button>
+                    Edit </button> */}
                 </td>
               </tr>
             );
@@ -41,6 +45,7 @@ const UserTable = (props) => {
 };
 
 export default UserTable;
+
 // import { FaTimes } from 'react-icons/fa';
 // import { FaPen } from 'react-icons/fa';
 

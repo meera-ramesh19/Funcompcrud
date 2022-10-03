@@ -19,3 +19,12 @@ td {
   padding-left: 20px;
   padding-right: 20px;
 }
+.delIcon {
+  color: red;
+  cursor: pointer;
+}
+
+.editIcon {
+  color: blue;
+  cursor: pointer;
+}
