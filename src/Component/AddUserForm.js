@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddUserForm.css'
 
 const AddUserForm = (props) => {
   let initialFormState = { id: null, name: '', comment: '' };
@@ -41,7 +42,7 @@ const AddUserForm = (props) => {
 
   // render() {
   return (
-    <form
+    <form className='add-form'
     // onSubmit={(event) => {
     //   event.preventDefault();
     //   if (!user.name || !user.username) return;
@@ -50,7 +51,7 @@ const AddUserForm = (props) => {
     //   setUser(initialFormState);
     // }}
     >
-      {/* <div> */}
+      <div className="form-control">
         <label>Name</label>
         <input
           type='text'
@@ -58,8 +59,8 @@ const AddUserForm = (props) => {
           value={user.name}
           onChange={handleInputChange}
         />
-      {/* </div>
-      <div> */}
+      </div>
+      <div className="form-control">
         <label>Username</label>
         <input
           type='text'
@@ -67,12 +68,12 @@ const AddUserForm = (props) => {
           value={user.comment}
           onChange={handleInputChange}
         />
-      {/* </div>
-      <div> */}
+      </div>
+      <div className="form-control">
         <button type='submit' onClick={handleSubmit}>
           Add new user
         </button>
-      {/* </div> */}
+      </div>
     </form>
   );
   //     <form
